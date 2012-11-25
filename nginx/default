@@ -1,15 +1,14 @@
 
 server {
-	root /home/ubuntu/public;
-	index index.html index.htm;
+  root /home/ubuntu/public;
+  index index.html index.htm;
 
-	# Make site accessible from http://localhost/
-	server_name localhost;
+  # Make site accessible from http://localhost/
+  server_name localhost;
 
-	location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ /index.html;
-	}
+  location / {
+    # First attempt to serve request as file, then
+    # as directory, then fall back to displaying a 404.
+    try_files $uri $uri/ /index.html;
+  }
 }
-
